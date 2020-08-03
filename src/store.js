@@ -41,7 +41,6 @@ export default new Vuex.Store({
     getters: {
         // Compute derived state based on the current state. More like computed property.
         getAllBooks(state) {
-            console.log('getters all books ', state.allBooks)
             return state.allBooks.map(val => val);
         },
         getAllOpenBookRequests(state) {
@@ -60,7 +59,6 @@ export default new Vuex.Store({
             let bookStatus = state.allBooks.find(details => details.isbn === payload.isbn);
             if(!bookStatus) return;
             bookStatus.bookTaken = true;
-            console.log('State books.. ', state.allBooks)
             return state.usersWithBooks.unshift(payload);
         }
     },
@@ -71,7 +69,6 @@ export default new Vuex.Store({
         }, newBookData) {
             // Firebase calls
             setTimeout(() => {
-                console.log('Tf really, ', newBookData)
                 commit('addBook', newBookData)
             }, 0);
         },
