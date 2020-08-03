@@ -6,10 +6,11 @@
       <div class="forms-container">
         <div class="info">Request Books</div>
         <fieldset>
-          <formulate-form v-model="values" @submit="submitHandler">
+          <formulate-form @submit="submitHandler">
             <div class="book-name">
               <div class="label">Book Name</div>
               <FormulateInput
+                v-model="bookName"
                 type="text"
                 validation="required"
                 placeholder="Book name"
@@ -19,6 +20,7 @@
               <div class="label">Author Name</div>
               <FormulateInput
                 type="text"
+                v-model="authorName"
                 label="Author name"
                 validation="required"
                 placeholder="author name"
@@ -29,6 +31,7 @@
 
               <FormulateInput
                 type="number"
+                v-model="isbnNumber"
                 validation="required"
                 placeholder="978-3-16-148410-0"
               />
@@ -37,6 +40,7 @@
               <div class="label">Benefits</div>
               <div class="ISBN">
                 <FormulateInput
+                v-model="reason"
                   type="textarea"
                   validation="max:50,length"
                   error-behavior="live"
@@ -72,16 +76,16 @@ export default {
   },
   data() {
     return {
-      values: {},
+      bookName:'', authorName:'', isbnNumber: '', reason: '',
     };
   },
   methods: {
     submitHandler() {
       let config = {
-        name: this.values.text_1,
-        author: this.values.text_2,
-        isbn: this.values.number_3,
-        reason: this.values.textarea_4 || undefined,
+        name: this.bookName,
+        author: this.authorName,
+        isbn: this.isbnNumber,
+        reason: this.reason || undefined,
       };
       this.$store.dispatch("bookRequests", config);
       alert(`Thank you for your order!`);

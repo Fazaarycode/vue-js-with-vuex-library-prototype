@@ -40,7 +40,6 @@ export default {
   },
   methods: {
     addBook() {
-      console.log('Mapla..')
       this.$router.push("addBook");
     },
     showAllBooks() {

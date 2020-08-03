@@ -1,6 +1,5 @@
 function setFormStyleTextArea() {
     let formInputs = document.querySelectorAll('textarea');
-    // console.log('What is this ', formInputs)
     // set padding , height, width and color and font
     formInputs.forEach(el => {
         el.style.padding = '10px';
@@ -15,13 +14,10 @@ function setFormStyleTextArea() {
 }
 
 function setFormStyle() {
-    console.log('tf')
     let formInputs = document.querySelectorAll('input');
-    console.log('What is this ', formInputs)
     // set padding , height, width and color and font
     formInputs.forEach(el => {
         el.style.padding = '10px';
-        el.style.height = '40px';
         el.style.lineHeight = '1.7';
         el.style.width = '200px';
         el.style.color = 'white';
