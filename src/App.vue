@@ -16,5 +16,6 @@ export default {
 body {
   background-color: brown;
   font-family: 'PT Sans', sans-serif;
+  margin:0;
 }
 </style>

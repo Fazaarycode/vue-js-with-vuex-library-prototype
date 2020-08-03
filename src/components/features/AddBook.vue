@@ -13,7 +13,6 @@
                 v-model="bookName"
                 type="text"
                 validation="required"
-                validation-name="book-name"
                 placeholder="Book name"
               />
             </div>
@@ -23,7 +22,6 @@
                 type="text"
                 v-model="authorName"
                 validation="required"
-                validation-name="author-name"
                 placeholder="author name"
               />
             </div>
@@ -33,7 +31,6 @@
                 type="number"
                 v-model="isbnNumber"
                 validation="required"
-                validation-name="ISBN-number"
                 placeholder="ISBN#"
               />
             </div>
