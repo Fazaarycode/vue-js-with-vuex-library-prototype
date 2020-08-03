@@ -12,7 +12,9 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
 body {
   background-color: brown;
+  font-family: 'PT Sans', sans-serif;
 }
 </style>

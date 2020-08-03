@@ -125,6 +125,7 @@ export default {
   padding: 20px;
   .label {
     margin-bottom: 5px;
+    font-weight: 700;
   }
 }
 .suggestions {
